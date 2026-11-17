@@ -8,11 +8,15 @@ import {
   User,
 } from 'firebase/auth';
 import { doc, getDocFromServer, getFirestore } from 'firebase/firestore';
-import firebaseConfigLocal from '../../firebase-applet-config.json' with { type: 'json' };
-
-// Fallback or direct assignment
-const firebaseConfig = firebaseConfigLocal;
-
+// Replace the direct JSON import block with this robust configuration loader
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSy...", // fallback values or parsed config
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "gen-lang-client-0333563690.firebaseapp.com",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "gen-lang-client-0333563690",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "gen-lang-client-0333563690.firebasestorage.app",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "969670269237",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:969670269237:web:95447e73371a8df6a1947c"
+};
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
