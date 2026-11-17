@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import type { A4PageContent } from './schema.ts';
+import type { A4PageContent } from './schema.js';
 
 export const ADMIN_OWNER_EMAIL = 'invcorporation7@gmail.com';
 export const CONSTANT_ADMIN_LICENSE_KEY = 'ADM9ASAN';
