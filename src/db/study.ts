@@ -1,14 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import { and, desc, eq, isNull, or } from 'drizzle-orm';
-import { db } from './index.ts';
+import { db } from './index.js';
 import {
   getLocalStore,
   isDbUnavailableError,
   nextSeq,
   persistLocalStore,
   UPLOADS_DIR,
-} from './localStore.ts';
+} from './localStore.js';
 import {
   A4PageContent,
   calendarEvents,
@@ -26,8 +26,8 @@ import {
   tasks,
   userMessages,
   users,
-} from './schema.ts';
-import { awardPoints } from './users.ts';
+} from './schema.js';
+import { awardPoints } from './users.js';
 
 const STUDY_KEYWORDS = [
   'study',
