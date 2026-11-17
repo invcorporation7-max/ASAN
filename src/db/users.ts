@@ -9,7 +9,7 @@ import {
   nextSeq,
   persistLocalStore,
   StoreUser,
-} from './localStore.ts';
+} from './localStore.js';
 import {
   licenseKeys,
   notebooks,
@@ -18,7 +18,7 @@ import {
   pointTransactions,
   userMessages,
   users,
-} from './schema.ts';
+} from './schema.js';
 
 export function getSundayWeekKey(date = new Date()): string {
   const d = new Date(date);
