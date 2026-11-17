@@ -8,7 +8,7 @@ import {
   User,
 } from 'firebase/auth';
 import { doc, getDocFromServer, getFirestore } from 'firebase/firestore';
-import firebaseConfig from '../../firebase-applet-config.json';
+import firebaseConfig from '../../firebase-applet-config.json' assert { type: 'json' };
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
