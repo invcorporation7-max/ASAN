@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 import { desc, eq, or } from 'drizzle-orm';
-import { db } from './index';
+import { db } from './index.js';
 import {
   ADMIN_OWNER_EMAIL,
   CONSTANT_ADMIN_LICENSE_KEY,
